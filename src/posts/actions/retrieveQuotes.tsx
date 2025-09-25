@@ -1,13 +1,16 @@
 'use server'
  
 export async function RetrieveQuotes(index: string) {
-    if(index === null || index == "") return "No value was provided, please type in a number then submit the form!"
+    const idx = Number.parseInt(index,10)
+    if(!Number.isInteger(idx) || idx < 1) return "Please provide a non-negative number."
     try{
-        await new Promise((resolve) => setTimeout(resolve, 500));
-        const response = await fetch('https://dummyjson.com/quotes')
-        const json = await response.json();
-        if(parseInt(index) > json.quotes.length) return `Please provide a valid number between 1 and ${json.quotes.length}`
-        return json.quotes[index].quote
+        await new Promise((resolve) => setTimeout(resolve, 1000));
+        const response = await fetch(`https://dummyjson.com/quotes?limit=1&skip=${idx}`, {cache: 'no-store'})
+        if (response.status === 404) return `No quote with id ${idx}.`
+        if (!response.ok) throw new Error(`Request failed (${response.status})`)
+        const data = await response.json();
+        if (!data.quotes?.length) return `Index ${idx} is out of range (1 to ${data.total}).`
+        return data.quotes[0].quote
     }catch(error){
         console.log(error);
         throw error;
