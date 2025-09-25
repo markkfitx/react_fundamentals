@@ -6,10 +6,12 @@ import { Input } from "@/components/ui/input"
 import CustomForm from "@/components/form"
 import { RetrieveQuotes } from "@/posts/actions/retrieveQuotes"
 
+
 type Props = { onQuote: (q: string) => void }
 export default function QuotesForm({onQuote}: Props) {
   const [quoteIndex, setQuoteIndex] = useState("")
-
+  const controller = new AbortController();
+  const signal = controller.signal;
   // action(prevState, formData)
   async function formAction(_prev: string, formData: FormData) {
     const idx = (formData.get("quoteIdx") as string) ?? ""
@@ -17,7 +19,8 @@ export default function QuotesForm({onQuote}: Props) {
     const quote = await RetrieveQuotes(idx) // or pass formData if your action expects it
     console.log(quote)
     onQuote(String(quote))
-    return "" // new state if you need it
+    controller.abort()
+    return ""
   }
 
   const [error, action, isLoading] = useActionState(formAction, "")
