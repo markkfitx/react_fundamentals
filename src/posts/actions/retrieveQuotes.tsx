@@ -10,7 +10,7 @@ export async function RetrieveQuotes(index: string) {
         if (!response.ok) throw new Error(`Request failed (${response.status})`)
         const data = await response.json();
         if (!data.quotes?.length) return `Index ${idx} is out of range (1 to ${data.total}).`
-        return data.quotes[0].quote
+        return `"${data.quotes[0].quote}" - ${data.quotes[0].author}`
     }catch(error){
         console.log(error);
         throw error;

@@ -17,7 +17,6 @@ export default function QuotesForm({onQuote}: Props) {
     const idx = (formData.get("quoteIdx") as string) ?? ""
     setQuoteIndex(idx)
     const quote = await RetrieveQuotes(idx) // or pass formData if your action expects it
-    console.log(quote)
     onQuote(String(quote))
     controller.abort()
     return ""
