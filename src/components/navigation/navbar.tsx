@@ -12,7 +12,7 @@ export default function Navbar(){
         }
     ]
     return (
-        <div className="w-full py-3 flex flex-row gap-2">
+        <div className="w-fit flex flex-row gap-2">
             {navItems.map((nLink) =>{
                 return <NavLink key={nLink.url} url={nLink.url}>{nLink.label}</NavLink>
             })}

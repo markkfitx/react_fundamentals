@@ -8,6 +8,6 @@ interface NavLinkProps {
 
 export default function NavLink({url,children}: NavLinkProps){
     return (
-        <Link href={url} className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-1 px-3 border border-blue-500 hover:border-transparent rounded">{children}</Link>
+        <Link href={url} className="content-center bg-transparent hover:bg-orange-400 text-white font-semibold hover:text-gray-900 py-1 px-3 border border-transparent rounded text-xs">{children}</Link>
     )
 }
