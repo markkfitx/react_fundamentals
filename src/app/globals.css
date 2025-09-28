@@ -149,3 +149,7 @@ Input{
   border-radius: 2px;
   color:white;
 }
+.skillCard .card-bg{
+  background-color: rgba(255,255,255,0.1);
+  filter:blur(5px);
+}

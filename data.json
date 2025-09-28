@@ -1,0 +1,72 @@
+{
+    "skills": [
+        {
+            "icon" : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+            "label" : "Reactjs",
+            "width": 15,
+            "height": 15
+        },
+        {
+            "icon" : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-plain.svg",
+            "label" : "Next.JS",
+            "width": 15,
+            "height": 15
+        },
+        {
+            "icon" : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+            "label" : "JavaScript",
+            "width": 15,
+            "height": 15
+        },
+        {
+            "icon" : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+            "label" : "TypeScript",
+            "width": 15,
+            "height": 15
+        },
+        {
+            "icon" : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
+            "label" : "Git",
+            "width": 15,
+            "height": 15
+        },
+        {
+            "icon" : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg",
+            "label" : "SQL",
+            "width": 15,
+            "height": 15
+        },
+        {
+            "icon" : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/htmx/htmx-original.svg",
+            "label" : "HTML",
+            "width": 15,
+            "height": 15
+        },
+        {
+            "icon" : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+            "label" : "Tailwindcss",
+            "width": 15,
+            "height": 15
+        },
+        {
+            "icon" : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-plain.svg",
+            "label" : "C# / .NET",
+            "width": 15,
+            "height": 15
+        }
+    ],
+    "navItems": [
+        { 
+            "label": "Home", 
+            "url": "/" 
+        },
+        { 
+            "label": "Portfolio", 
+            "url": "/portfolio" 
+        },
+        { 
+            "label": "Contact", 
+            "url": "/contact" 
+        }
+    ]
+}
