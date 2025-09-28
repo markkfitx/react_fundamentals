@@ -4,11 +4,11 @@ export default function Navbar(){
     const navItems = [
         { 
             "label": "Home", 
-            "url": "/dashboard" 
+            "url": "/" 
         },
         { 
-            "label": "Hook Examples", 
-            "url": "/hooks" 
+            "label": "Portfolio", 
+            "url": "/portfolio" 
         }
     ]
     return (

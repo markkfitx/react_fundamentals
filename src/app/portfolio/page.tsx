@@ -1,7 +1,7 @@
 "use client"
 import Card from "@/components/card"
 import {useState} from "react"
-export default function Hooks(){
+export default function Portfolio(){
     const [count, setCount] = useState(0)
     const increment = () =>{
         setCount((prev) => prev +1)
